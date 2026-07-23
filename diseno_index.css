@@ -14,8 +14,10 @@ body {
 /* Cabecera: entra deslizandose desde abajo y se queda fija arriba */
 .cabecera {
     width: 100%;
-    background-color: #1a1a1a;
-    padding: 15px 0;
+    padding: 18px 0;
+    background: linear-gradient(180deg, #232323 0%, #141414 100%);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+    border-bottom: 3px solid #8a1f2b;
 
     animation: subir_cabecera 0.8s ease-out forwards;
 }
@@ -23,17 +25,38 @@ body {
 .contenedor_redirecciones_cabecera {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 48px;
 }
 
 .contenedor_redirecciones_cabecera a {
-    color: #fff;
+    position: relative;
+    padding-bottom: 6px;
+    color: #f2f2f2;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.contenedor_redirecciones_cabecera a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #c9a227;
+    transition: width 0.3s ease;
 }
 
 .contenedor_redirecciones_cabecera a:hover {
     color: #c9a227;
+}
+
+.contenedor_redirecciones_cabecera a:hover::after {
+    width: 100%;
 }
 
 @keyframes subir_cabecera {
@@ -55,10 +78,11 @@ body {
     justify-content: center;
     text-align: center;
     min-height: 80vh;
+    margin-top: 50px;
 }
 
 .contenedor_logo img {
-    max-width: 250px;
+    width: 500px;
 
     opacity: 0;
     animation: aparecer_logo 1.2s ease-out forwards;
@@ -85,10 +109,29 @@ body {
 }
 
 .contenedor_logo a {
-    color: #c9a227;
+    display: inline-block;
+    margin-top: 22px;
+    padding: 12px 34px;
+    background: linear-gradient(180deg, #8a1f2b 0%, #691620 100%);
+    border: 1px solid #c9a227;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+    color: #f2f2f2;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
     opacity: 0;
     animation: aparecer_logo 1s ease-out forwards;
     animation-delay: 0.8s;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.contenedor_logo a:hover {
+    background: linear-gradient(180deg, #a12634 0%, #7a1a26 100%);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
 }
