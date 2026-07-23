@@ -1,0 +1,117 @@
+/* Seccion de servicios: lista de precios con soporte para imagen de fondo */
+.contenedor_servicios {
+    position: relative;
+    overflow: hidden;
+    padding: 80px 20px;
+    background-color: #141414;
+}
+
+.contenedor_servicios::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    /* cuando elijas la imagen, descomenta la siguiente linea y coloca la ruta correcta */
+    /* background-image: url('imagenes/nombre-de-tu-imagen.jpg'); */
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(30%) brightness(0.5);
+}
+
+.contenedor_servicios::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(20, 20, 20, 0.88) 0%, rgba(20, 20, 20, 0.96) 100%);
+}
+
+.contenedor_titulo_servicios,
+.contenedor_columnas_servicios {
+    position: relative;
+    z-index: 1;
+}
+
+.contenedor_titulo_servicios {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.contenedor_titulo_servicios span {
+    color: #c9432f;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.contenedor_titulo_servicios h2 {
+    margin-top: 12px;
+    color: #f2f2f2;
+    font-size: 2.2rem;
+}
+
+.contenedor_columnas_servicios {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contenedor_lista_servicios {
+    flex: 1 1 420px;
+    max-width: 480px;
+    padding: 40px 30px;
+    border: 1px solid rgba(201, 162, 39, 0.35);
+    border-radius: 4px;
+}
+
+.etiqueta_servicios {
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 10px 22px;
+    background: linear-gradient(180deg, #8a1f2b 0%, #691620 100%);
+    border: 1px solid #c9a227;
+    border-radius: 4px;
+    color: #f2f2f2;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.servicio {
+    margin-bottom: 28px;
+}
+
+.encabezado_servicio {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.encabezado_servicio h4 {
+    color: #f2f2f2;
+    font-size: 1.05rem;
+    white-space: nowrap;
+}
+
+.linea_punteada {
+    flex: 1;
+    border-bottom: 2px dotted rgba(242, 242, 242, 0.25);
+    transform: translateY(-4px);
+}
+
+.precio_servicio {
+    color: #c9a227;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.servicio p {
+    margin-top: 8px;
+    color: #a8a8a8;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}

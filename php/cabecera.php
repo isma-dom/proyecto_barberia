@@ -7,11 +7,11 @@
 
         <div class="contenedor_redirecciones_cabecera">
 
-            <a href="">Inicio</a>
+            <a href="index.php">Inicio</a>
 
             <a href="">Quienes Somos</a>
 
-            <a href="">Servicios</a>
+            <a href="#servicios">Servicios</a>
 
             <a href="">Agenda tu cita</a>
 

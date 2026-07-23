@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="diseno_index.css">
+    <link rel="stylesheet" href="css/servicios.css">
 
 </head>
 
@@ -23,6 +24,7 @@
         <a href="">Agendar</a>
 
     </div>
+
 
 <?php include 'php/footer.php'; ?>
 
