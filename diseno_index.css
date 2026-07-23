@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+/* Cabecera: entra deslizandose desde abajo y se queda fija arriba */
+.cabecera {
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 15px 0;
+
+    animation: subir_cabecera 0.8s ease-out forwards;
+}
+
+.contenedor_redirecciones_cabecera {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.contenedor_redirecciones_cabecera a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contenedor_redirecciones_cabecera a:hover {
+    color: #c9a227;
+}
+
+@keyframes subir_cabecera {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Contenedor del logo: la imagen aparece en el centro con fade + zoom */
+.contenedor_logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh;
+}
+
+.contenedor_logo img {
+    max-width: 250px;
+
+    opacity: 0;
+    animation: aparecer_logo 1.2s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes aparecer_logo {
+    from {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.contenedor_logo h1 {
+    color: #1a1a1a;
+    margin-top: 10px;
+    opacity: 0;
+    animation: aparecer_logo 1s ease-out forwards;
+    animation-delay: 0.8s;
+}
+
+.contenedor_logo a {
+    color: #c9a227;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 0;
+    animation: aparecer_logo 1s ease-out forwards;
+    animation-delay: 0.8s;
+}
