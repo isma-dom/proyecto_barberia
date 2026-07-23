@@ -1,0 +1,158 @@
+.contenedor_imagen_fondo_nosotros{
+    background-image: url('../imagenes/fondo_victors.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+    padding-top: 400px;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    color: #f2f2f2;
+    border: 2px solid #1f6f64;
+    border-radius: 15px;
+    width: 60%;
+    margin: auto;
+    padding: 25px 5px 25px 5px;
+    background-color: rgba(16, 21, 20, 0.75);
+}
+
+.contenedor_imagen_historia img{
+    width: 380px;
+}
+
+.contenedor_historia{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.contenedor_equipo{
+    padding-bottom: 20px;
+}
+
+.contenedor_valores {
+    max-width: 1100px;
+    margin:  80px auto;
+    padding: 30px 40px 30px 40px;
+    background-color: #ede4c8;
+    width: 80%;
+    border: 4px solid #6b6b6b;
+    border-radius: 20px;
+}
+
+.contenedor_titulo_valores {
+    max-width: 640px;
+    margin-bottom: 40px;
+}
+
+.contenedor_titulo_valores h2 {
+    font-size: 2rem;
+}
+
+.contenedor_titulo_valores p {
+    color: #6b6b6b;
+    font-size: 1rem;
+}
+
+.contenedor_columnas_valores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.valor {
+    padding: 28px 24px;
+    border: 1px solid #e4e0da;
+    border-radius: 10px;
+    background-color: #fafaf8;
+}
+
+.icono_valor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+}
+
+.icono_valor svg {
+    width: 20px;
+    height: 20px;
+}
+
+.valor h3 {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+
+.valor p {
+    color: #6b6b6b;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.contenedor_equipo{
+    text-align: center;
+    background-color: #1f6f64;
+    padding-top: 30px;
+}
+
+.contenedor_equipo img{
+    width: 500px;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+.contenedor_miembros_del_equipo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ede4c8;
+}
+
+.contenedor_hijo_mienmbros{
+    display: flex;
+}
+
+.contenedor_hijo_mienmbros img{
+    width: 250px;
+    height: 600px;
+}
+
+.tarjeta{
+    background: #1f6f64;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: 0.3s;
+    left: 0;
+    
+}
+
+.tarjeta:not(:first-child){
+    margin-left: -140px;
+}
+
+.tarjeta:hover{
+    transform: translateY(-140px);
+}
+
+.tarjeta:hover ~ .tarjeta{
+    left: 50px;
+}

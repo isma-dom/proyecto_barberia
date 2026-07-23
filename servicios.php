@@ -1,3 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallo Fino|Servicios</title>
+    <link rel="stylesheet" href="diseno_index.css">
+    <link rel="stylesheet" href="css/servicios.css">
+
+</head>
+
+<body>
+
+<?php include 'php/cabecera.php'; ?>
+
 <!--
   creo un contenedor padre llamado "contenedor_servicios" que
   almacenara el titulo de la seccion y las dos columnas de
@@ -158,3 +175,8 @@
         </div>
 
     </div>
+
+<?php include 'php/footer.php'; ?>
+
+</body>
+</html>

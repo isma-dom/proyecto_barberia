@@ -9,9 +9,9 @@
 
             <a href="index.php">Inicio</a>
 
-            <a href="">Quienes Somos</a>
+            <a href="nosotros.php">Nosotros</a>
 
-            <a href="#servicios">Servicios</a>
+            <a href="servicios.php">Servicios</a>
 
             <a href="">Agenda tu cita</a>
 

@@ -7,7 +7,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
-    background-color: #ffffff;
+    background-color: #ede4c8;
     color: #1a1a1a;
 }
 
@@ -15,9 +15,9 @@ body {
 .cabecera {
     width: 100%;
     padding: 18px 0;
-    background: linear-gradient(180deg, #232323 0%, #141414 100%);
+    background: linear-gradient(180deg, #1c2624 0%, #101514 100%);
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
-    border-bottom: 3px solid #8a1f2b;
+    border-bottom: 3px solid #c1272d;
 
     animation: subir_cabecera 0.8s ease-out forwards;
 }
@@ -47,12 +47,12 @@ body {
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #c9a227;
+    background-color: #3fa398;
     transition: width 0.3s ease;
 }
 
 .contenedor_redirecciones_cabecera a:hover {
-    color: #c9a227;
+    color: #3fa398;
 }
 
 .contenedor_redirecciones_cabecera a:hover::after {
@@ -106,14 +106,15 @@ body {
     opacity: 0;
     animation: aparecer_logo 1s ease-out forwards;
     animation-delay: 0.8s;
+    font-weight: bold;
 }
 
 .contenedor_logo a {
     display: inline-block;
     margin-top: 22px;
     padding: 12px 34px;
-    background: linear-gradient(180deg, #8a1f2b 0%, #691620 100%);
-    border: 1px solid #c9a227;
+    background: linear-gradient(180deg, #c1272d 0%, #8f1d22 100%);
+    border: 1px solid #ede4c8;
     border-radius: 4px;
     box-shadow: 0 10px 12px rgba(0, 0, 0, 0.25);
 
@@ -131,7 +132,7 @@ body {
 }
 
 .contenedor_logo a:hover {
-    background: linear-gradient(180deg, #a12634 0%, #7a1a26 100%);
+    background: linear-gradient(180deg, #d6383e 0%, #a62328 100%);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
 }
@@ -141,8 +142,8 @@ body {
     width: 100%;
     margin-top: 60px;
     padding: 50px 20px 0;
-    background: linear-gradient(180deg, #141414 0%, #232323 100%);
-    border-top: 3px solid #8a1f2b;
+    background: linear-gradient(180deg, #101514 0%, #1c2624 100%);
+    border-top: 3px solid #c1272d;
 }
 
 .contenedor_columnas_pie_pagina {
@@ -159,7 +160,7 @@ body {
 .contenedor_redes_pie_pagina h3,
 .contenedor_enlaces_pie_pagina h3 {
     margin-bottom: 14px;
-    color: #c9a227;
+    color: #3fa398;
     font-size: 1rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -184,7 +185,7 @@ body {
 
 .contenedor_redes_pie_pagina a:hover,
 .contenedor_enlaces_pie_pagina a:hover {
-    color: #c9a227;
+    color: #3fa398;
 }
 
 .contenedor_mapa_pie_pagina {
@@ -196,7 +197,7 @@ body {
     display: block;
     width: 80%;
     height: 300px;
-    border: 1px solid #c9a227;
+    border: 1px solid #1f6f64;
     border-radius: 6px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
     margin: auto;
