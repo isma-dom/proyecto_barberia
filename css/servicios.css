@@ -1,0 +1,149 @@
+/* Seccion de servicios: lista de precios con soporte para imagen de fondo */
+.contenedor_servicios {
+    /* relative: punto de referencia para que el ::before (imagen) y el
+       ::after (degradado), que usan position: absolute, se acomoden
+       respecto a esta caja y no respecto a toda la pagina */
+    position: relative;
+
+    /* recorta lo que se salga de esta caja, para que la imagen de fondo
+       no se desborde y desordene el footer de abajo */
+    overflow: hidden;
+
+    /* espacio interno arriba/abajo y a los lados, para que el titulo y
+       las tarjetas de precios no se vean pegadas al borde */
+    padding: 80px 20px;
+
+    /* color de respaldo por si la imagen de fondo no carga */
+    background-color: #101514;
+}
+
+/* ::before crea un elemento invisible extra (no existe en el HTML) que
+   sirve como capa para la imagen de fondo, detras del contenido real */
+.contenedor_servicios::before {
+    /* obligatorio en todo ::before/::after, si no, no se renderiza */
+    content: '';
+
+    /* absolute + inset:0 = estira este pseudo-elemento para que cubra
+       exactamente el tamaño completo de .contenedor_servicios */
+    position: absolute;
+    inset: 0;
+
+    /* ../ porque este css vive en css/ y la imagen esta en imagenes/,
+       un nivel arriba (las rutas en CSS son relativas al archivo .css) */
+    background-image: url('../imagenes/victors1.png');
+
+    /* cover: la imagen llena todo el espacio sin deformarse, recortando
+       lo que sobre. center: centra el recorte */
+    background-size: cover;
+    background-position: center;
+
+    /* grayscale(30%) le quita saturacion de color, brightness(0.5) la
+       oscurece al 50% para que el texto de encima siga siendo legible */
+    filter: grayscale(30%) brightness(0.5);
+}
+
+.contenedor_servicios::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(16, 21, 20, 0.88) 0%, rgba(16, 21, 20, 0.96) 100%);
+}
+
+.contenedor_titulo_servicios,
+.contenedor_columnas_servicios {
+    position: relative;
+    z-index: 1;
+}
+
+.contenedor_titulo_servicios {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.contenedor_titulo_servicios span {
+    color: #c1272d;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.contenedor_titulo_servicios h2 {
+    margin-top: 12px;
+    color: #f2f2f2;
+    font-size: 2.2rem;
+}
+
+.contenedor_columnas_servicios {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contenedor_lista_servicios {
+    flex: 1 1 420px;
+    max-width: 480px;
+    padding: 40px 30px;
+    border: 1px solid rgba(31, 111, 100, 0.35);
+    border-radius: 4px;
+}
+
+.etiqueta_servicios {
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 10px 22px;
+    background: linear-gradient(180deg, #c1272d 0%, #8f1d22 100%);
+    border: 1px solid #ede4c8;
+    border-radius: 4px;
+    color: #f2f2f2;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.servicio {
+    margin-bottom: 28px;
+}
+
+.encabezado_servicio {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.encabezado_servicio h4 {
+    color: #f2f2f2;
+    font-size: 1.05rem;
+    white-space: nowrap;
+}
+
+.linea_punteada {
+    flex: 1;
+    border-bottom: 2px dotted rgba(242, 242, 242, 0.25);
+    transform: translateY(-4px);
+}
+
+/* el .pie_pagina trae margin-top: 60px pensado para cuando sigue al
+   .contenedor_logo (fondo blanco). Aqui sigue a .contenedor_servicios,
+   que ya es oscuro y tiene su propio padding-bottom, asi que ese margen
+   solo se ve como una franja blanca de mas: la quitamos en este caso */
+.contenedor_servicios + .pie_pagina {
+    margin-top: 0;
+}
+
+.precio_servicio {
+    color: #3fa398;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.servicio p {
+    margin-top: 8px;
+    color: #a8a8a8;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
